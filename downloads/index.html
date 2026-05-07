@@ -168,7 +168,8 @@ btn.onclick = async () => {
 
   try {
     const res = await fetch("../data/" + sn + ".json?t=" + Date.now());
-
+    main.style.display = "none";   
+    
 if (!res.ok) throw new Error();
 
 const data = await res.json();
