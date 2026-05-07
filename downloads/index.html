@@ -169,20 +169,27 @@ btn.onclick = async () => {
   try {
     const res = await fetch("../data/" + sn + ".json?t=" + Date.now());
 
-    if (!res.ok) throw new Error();
+if (!res.ok) throw new Error();
 
-// ⭐ 新增：判断下载权限
 const data = await res.json();
 
-// ⭐ 用 verify_code 控制权限
+// ⭐ ND新品不开放下载
 if (data.verify_code === "0") {
   alert("该产品暂未开放下载");
+
   btn.innerText = "验证";
   return;
 }
 
+// ⭐ 正常产品
 name.textContent = data.version;
 img.src = "../assets/products/" + data.image;
+
+// ⭐ 显示下载区域
+main.style.display = "block";
+
+// ⭐ 恢复按钮
+btn.innerText = "✔ 已验证";
 
   } catch {
     btn.innerText = "验证失败";
