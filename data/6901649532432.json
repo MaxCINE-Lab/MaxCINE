@@ -1,9 +1,9 @@
 {
   "verify_code": "0",
   "version": "祝你全家早早死光",
-  "buy_date": "待更新",
-  "start_date": "待更新",
-  "end_date": "待更新",
-  "repair_record": "无",
+  "buy_date": "温馨提示，该产品存在异常记录，可能无法正常保修",
+  "start_date": "本产品属非法渠道取得，MaxCINE将不提供任何支持",
+  "end_date": "请勿购买该产品，因为无法得到保障",
+  "repair_record": "有",
   "image": "m4pwal.png"
 }
